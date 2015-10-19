@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src='js/typeahead.min.js'></script>
+    <script src='js/bloodhound.min.js'></script>
+    <script src="js/handlebars.js"></script>
+    <script src="js/settings.js"></script>
+    <script id="game-template" type="text/x-handlebars-template">
+      <p class="game"><strong>{{ name }}</strong></p>
+    </script>
+    <script src="js/project.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <title>What Should I Play?</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <h1>What Should I Play?</h1>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <div class="row">
+            <div class="col-xs-9 col-xs-push-3">
+              <h2>Add Games</h2>
+            </div>
+          </div>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="id_name" class="col-xs-3 control-label">Game</label>
+              <div class="col-xs-9">
+                <input class=" form-control" type="text" placeholder="e.g. Shovel Knight" id="id_name">
+              </div>
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="id_bgg" class="col-xs-3 control-label">BoardGameGeek URL</label>
+              <div class="col-xs-9">
+                <input class=" form-control" type="text" placeholder="e.g. http://boardgamegeek.com/boardgame/13/catan" id="id_bgg">
+              </div>
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="id_gbomb" class="col-xs-3 control-label">GiantBomb URL</label>
+              <div class="col-xs-9">
+                <input class=" form-control" type="text" placeholder="e.g. http://www.giantbomb.com/shovel-knight/3030-42034/" id="id_gbomb">
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-xs-9 col-xs-push-3">
+                <button id="submit" type="button" class="btn btn-primary">Add Your Game</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <h2>My Games <button id="pick-game" class="btn btn-primary">Pick a Game</button></h2>
+          <div id="games"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
